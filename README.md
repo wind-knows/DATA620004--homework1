@@ -33,9 +33,17 @@ numpy (1.21.5 √ )
 
 可以更改文件中的`model_path`变量以测试不同的模型。
 
-我提供了两个模型，区别在于v1的中间层为1024个神经元而v2为256个。
+我提供了两个模型，区别在于v1的中间层为1024个神经元而v2为256个。两模型的其他参数列举如下：
 
-
+```
+hidden = 1024/256
+learning_rate = 1e-3
+learning_rate_decay = 0.99  # 学习率衰减策略是每一个epoch后将学习率乘上 learning_rate_decay
+l2 = True
+reg_lambda = 1e-2
+seed = 123
+batch_size = 256
+```
 
 
 ### 训练
