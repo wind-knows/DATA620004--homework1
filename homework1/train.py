@@ -5,7 +5,6 @@ import model as my
 
 if __name__ == '__main__':
 
-    np.random.seed(123)
     # 超参数
     hidden = 256
     learning_rate = 1e-3
@@ -14,6 +13,10 @@ if __name__ == '__main__':
     reg_lambda = 1e-2
     # 保存模型的路径
     model_path = 'models//model_v2'
+    seed = 123
+    batch_size = 256
+    # 种子
+    np.random.seed(seed)
     # 读取数据
     train_data, train_label = my.loadMinist(onehot_needed=False)
     test_data, test_label = my.loadMinist(kind='test', onehot_needed=False)
